@@ -1,0 +1,176 @@
+$padding-value: 2%
+
+.profile-class-outer-div
+    //border: 1px solid white
+    //border-radius: 9px
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: 1080px
+    margin: auto
+    color: white
+    font-family: Montserrat-Thin
+    //overflow-x: hidden
+
+    .top-colorbar
+        border-radius: 0px 14px 0px 0px
+        height: 115px
+        position: relative
+        width: 100%
+        overflow-x: hidden
+
+        .scroll-element 
+            width: inherit
+            height: inherit
+            position: absolute
+            left: 0%
+            top: 0%
+
+        .primary-color-gradient-top,.secondary-color-gradient-top,.bottom-design
+            padding:0px
+            width: 100%
+            //height: 100%
+            //position: absolute
+        
+        .primary-color-gradient-top
+            animation: primary-color-gradient-top 10s linear infinite
+            background: -webkit-linear-gradient(top left, rgba(255,219,118,1), rgba(255,131,35,1), rgba(224,51,128,1), rgba(170,67,211,1), rgba(99,111,233,1))
+        .secondary-color-gradient-top
+            animation: secondary-color-gradient-top 10s linear infinite
+            background: -webkit-linear-gradient(bottom left, rgba(99,111,233,1), rgba(170,67,211,1), rgba(224,51,128,1), rgba(255,131,35,1), rgba(255,219,118,1))
+
+    .bottom-colorbar
+        border-radius: 0px 0px 0px 14px
+        height: 16px
+        position: relative
+        width: 100%
+        overflow-x: hidden
+
+        .scroll-element 
+            width: inherit
+            height: inherit
+            position: absolute
+            left: 0%
+            top: 0%
+
+        .primary-color-gradient-bottom
+            animation: primary-color-gradient-bottom 9s linear infinite
+            background: -webkit-linear-gradient(bottom left, rgba(99,111,233,1), rgba(170,67,211,1), rgba(224,51,128,1), rgba(255,131,35,1), rgba(255,219,118,1))
+        .secondary-color-gradient-bottom
+            animation: secondary-color-gradient-bottom 9s linear infinite
+            background: -webkit-linear-gradient(top left, rgba(255,219,118,1), rgba(255,131,35,1), rgba(224,51,128,1), rgba(170,67,211,1), rgba(99,111,233,1))
+
+    .profile-section
+        display: flex
+        //flex-direction: column
+        align-items: center
+
+        .introduction-section
+            padding: $padding-value
+            width: 65%
+            .header
+                //position: relative
+                font-size: clamp(45px, 4vw, 80px)
+            .header, .body
+                padding: 15px
+            .body
+                .code-color
+                    color: rgba(0,225,0,1)
+                .creative
+                    background: -webkit-linear-gradient(top left, rgba(255,219,118,1), rgba(255,131,35,1), rgba(224,51,128,1), rgba(170,67,211,1), rgba(99,111,233,1))
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+                .code, .creative
+                    font-size: 22px
+        
+        .project-section
+            width: 35%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            //border-left: 1px solid ivory
+            //padding: 20px
+
+            .project-top
+                //height: 9%
+                //border-top: 1px solid white
+                height: 25px
+                width: 30px
+                margin-left: auto
+                margin-right: $padding-value * 3
+                margin-top: 2px
+                margin-bottom: 2px
+                border-right: 1px solid transparent
+                border-top: 1px solid transparent
+                border-radius: 0px 7px 0px 0px
+                background: -webkit-linear-gradient(rgba(29,29,32,1), rgba(29,29,32,1)) padding-box, -webkit-linear-gradient(bottom right, rgba(255,219,118,.5), rgba(255,131,35,.5), rgba(224,51,128,.5), rgba(170,67,211,.5), rgba(99,111,233,.5)) border-box
+            .project-header
+                padding-left: 6%
+            //     font-size: clamp(30px, 2vw, 45px)
+            //     font-weight: bold
+            .project-content
+                //border: 1px solid white
+                //background-color: white
+                //height: 70%
+                .project-list
+                    list-style-type: none
+                    word-wrap: break-word
+                    .project-items
+                        transition: .2s
+                        margin-top: 10px
+                        margin-bottom: 10px
+                        margin-left: 1%
+                    .project-items:hover
+                        cursor: pointer
+                        //font-size: 20px
+                        //font-weight: 600
+                        letter-spacing: 1px
+                        color: rgba(255,255,255,1)
+                        //text-decoration: underline overline
+            .project-bottom
+                height: 25px
+                width: 30px
+                margin: 2px
+                border-left: 1px solid transparent
+                border-bottom: 1px solid transparent
+                border-radius: 0px 0px 0px 7px
+                background: -webkit-linear-gradient(rgba(29,29,32,1), rgba(29,29,32,1)) padding-box, -webkit-linear-gradient(bottom right, rgba(255,219,118,.5), rgba(255,131,35,.5), rgba(224,51,128,.5), rgba(170,67,211,.5), rgba(99,111,233,.5)) border-box
+    
+@media ( max-width: 800px )
+    .profile-section
+        //flex-direction: column
+
+
+//top colorbar animation
+@keyframes primary-color-gradient-top
+    0%
+        left: -100%
+    50%
+        left: 0%
+    100%
+        left:-100%
+
+@keyframes secondary-color-gradient-top
+    0%
+        left: 0%
+    50%
+        left: 100%
+    100%
+        left: 0%
+
+//bottom colorbar animation
+@keyframes primary-color-gradient-bottom
+    0%
+        left: -100%
+    50%
+        left: 0%
+    100%
+        left:-100%
+
+@keyframes secondary-color-gradient-bottom
+    0%
+        left: 0%
+    50%
+        left: 100%
+    100%
+        left: 0%
