@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ProfileComponent {
   // hashmap
   projects= new Map([
-    ["Honeybee Tetranine","https://www.google.com/"],
+    ["Honeybee Tetranine","https://dattaabhishek.github.io/HT/"],
     ["Goodman Agency","https://goodmanagency.co/"],
     ["LFF101","not hosted"]
   ]);
