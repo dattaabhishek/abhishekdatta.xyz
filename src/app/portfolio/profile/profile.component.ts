@@ -9,7 +9,7 @@ export class ProfileComponent {
   // hashmap
   projects= new Map([
     ["Honeybee Tetranine","https://dattaabhishek.github.io/HT/"],
-    ["Goodman Agency","https://goodmanagency.co/"],
+    ["Goodman Agency","not hosted"],
     ["LFF101","not hosted"]
   ]);
   // array
