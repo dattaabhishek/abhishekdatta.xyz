@@ -21,10 +21,11 @@
             </div>
             <div class="project-content">
                 <ul class="project-list">
-                    <li class="project-items">Honeybee Tetranine</li>
-                    <li class="project-items">Goodman Agency</li>
-                    <li class="project-items">LFF101</li>
-                  </ul> 
+                    <a target="_blank" *ngFor="let item of projects.keys(); let i = index" [href]=projects.get(item)>
+                        <li class="project-items">{{item}}</li>
+                        <li class="about-projects hide">{{aboutProjects[i]}}</li>
+                    </a>
+                </ul> 
             </div>
             <div class="project-bottom"></div>
         </div>

@@ -1,3 +1,7 @@
+a
+    color: white
+    text-decoration: none
+    
 $padding-value: 2%
 
 .profile-class-outer-div
@@ -118,9 +122,19 @@ $padding-value: 2%
                     .project-items
                         transition: .2s
                         margin-top: 10px
-                        margin-bottom: 10px
+                        // margin-bottom: 10px
                         margin-left: 1%
+                    .hide
+                        // border: 1px solid red
+                        background: black
+                        position: relative
+                        transition: height 1s ease-in-out
+                        overflow: hidden
+                        height: 0
                     .project-items:hover
+                        // height: auto
+                        // transition: height 1s ease-in-out
+                        // display: block
                         cursor: pointer
                         //font-size: 20px
                         //font-weight: 600
@@ -138,7 +152,7 @@ $padding-value: 2%
     
 @media ( max-width: 800px )
     .profile-section
-        //flex-direction: column
+        flex-direction: column
 
 
 //top colorbar animation
