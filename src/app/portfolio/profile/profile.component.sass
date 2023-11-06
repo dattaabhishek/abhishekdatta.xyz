@@ -3,6 +3,8 @@ a
     text-decoration: none
     
 $padding-value: 2%
+$projectDescriptionHeight: 70px
+$projectDescriptionMaxHeight: 500px
 
 .profile-class-outer-div
     //border: 1px solid white
@@ -122,31 +124,47 @@ $padding-value: 2%
                     .project-items
                         font-size: 17px
                         transition: .2s
-                        margin-top: 10px
-                        // margin-bottom: 10px
+                        margin-top: 15px
+                        cursor: pointer
+                        // padding-bottom: 10px
                         margin-left: 10%
-                    .about-projects
-                        // width: 90%
-                        padding: 0px
-                    .hide
-                        // border: 1px solid red
-                        border-radius: 5px
-                        background: black
-                        position: absolute
-                        transition: height 1s ease-in-out
-                        overflow: hidden
-                        height: 0
-                    .project-items:hover + .hide
-                        height: 10px
+                        .about-project
+                            // border: 1px solid red
+                            white-space: break-spaces
+                            border-radius: 7px
+                            // background-color: rgba(25,25,28,0.4)
+                            font-size: 15px
+                            margin-right: $padding-value * 7
+                            // position: absolute
+                            transition: all .5s ease-in-out
+                            overflow: hidden
+                            padding: 0
+                            height: 0
+                            // text-decoration: none !important
+                        .about-project:hover
+                            height: $projectDescriptionHeight
+                            display: block
+                            overflow-y: scroll
+                    .project-items:hover
+                        // height: 100px
                         // padding: 10px
                         // transition: height 1s ease-in-out
-                        display: block
-                        cursor: pointer
-                        //font-size: 20px
-                        //font-weight: 600
+                        // display: block
+                        // font-size: 20px
+                        // font-weight: 600
                         letter-spacing: 1px
                         color: rgba(255,255,255,1)
-                        //text-decoration: underline overline
+                        // text-decoration: underline
+
+                        // On hover changes project description properties
+                        .about-project
+                            padding: 10px
+                            letter-spacing: 0
+                            // Calculate the below using sass features
+                            height: $projectDescriptionHeight
+                            display: block
+                            overflow-y: scroll
+                            // text-decoration: none !important
             .project-bottom
                 height: 25px
                 width: 30px
@@ -181,6 +199,9 @@ $padding-value: 2%
                     .project-items
                         text-align: center !important
                         margin-left: 0 !important
+
+                        .about-project
+                            margin-right: 0 !important
 
             .project-bottom
                 margin-left: $padding-value * 3 !important
@@ -220,3 +241,10 @@ $padding-value: 2%
         left: 100%
     100%
         left: 0%
+
+::-webkit-scrollbar
+    width: 1px
+::-webkit-scrollbar-track
+    background: black
+::-webkit-scrollbar-thumb
+    background: white

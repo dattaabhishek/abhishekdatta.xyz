@@ -7,10 +7,10 @@
     <div class="profile-section">
         <div class="introduction-section">
             <div class="header">
-                {{welcomeMessage}}
+                {{aboutMe.welcomeMessage}}
             </div>
             <div class="body">
-                    {{aboutMe}} <br><br>
+                    {{aboutMe.introduction}} <br><br>
                     I've worked with most of the popular web technologies. I love to <b class="code-color">&lt;</b><b class="code code-color">code</b><b class="code-color">&gt;</b> and I'm passionate about being a little <b class="creative">creative</b> with my websites.
             </div>
         </div>
@@ -21,9 +21,9 @@
             </div>
             <div class="project-content">
                 <div class="project-list">
-                    <a target="_blank" *ngFor="let item of projects.keys(); let i = index" [href]=projects.get(item)>
-                        <div class="project-items">{{item}}</div>
-                        <div class="about-projects hide">{{aboutProjects[i]}}</div>
+                    <a target="_blank" *ngFor="let item of projects; let i = index" [href]=projects[i].projectUrl>
+                        <div class="project-items">{{projects[i].projectName}}
+                        <div class="about-project">{{projects[i].projectDescription}}</div></div>
                     </a>
                 </div> 
             </div>

@@ -6,22 +6,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.sass']
 })
 export class ProfileComponent {
-  welcomeMessage = "Hey, I'm Abhishek";
-  aboutMe = `I'm a software engineer. I like creating minimalistic, responsive, pixel-perfect and robust web-applications.`
+  aboutMe = {
+    welcomeMessage: "Hey, I'm Abhishek",
+    introduction: "I'm a software engineer. I like creating minimalistic, responsive, pixel-perfect and robust web-applications."
+  }
 
-  // hashmap to display project and embed their corresponding links
-  projects= new Map([
-    ["Honeybee Tetranine","https://dattaabhishek.github.io/HT/"],
-    ["Goodman Agency","not hosted"],
-    ["LFF101","not hosted"]
-  ]);
-  
-  // array of project description
-  aboutProjects = [
-    `A guitar enthusiast who likes to share his knowledge with others`,
-    `Goodman Agency is a gym-marketing agency.
-    I've helped them transform their unfinished website into a fully working markatable web-application ready to attract potential customers.`,
-    `E-learning platform`
-  ]
+  // array of json (projects)
+  projects = [
+    {
+      projectName: "Honeybee Tetranine",
+      projectUrl: "https://dattaabhishek.github.io/HT/",
+      projectDescription: "Honeybee Tetranine is a guitar enthusiast who likes to share his knowledge with others.\nHelping Honeybee to create his own Masterclass website.", 
+      descriptionVisible: false
+    },
+    {
+      projectName: "Goodman Agency",
+      projectUrl: "not hosted",
+      projectDescription: "Goodman Agency is a gym-marketing agency.\nHelped them transform their unfinished website into a fully working markatable web-application.", 
+      descriptionVisible: false
+    },
+    {
+      projectName: "LFF101",
+      projectUrl: "not hosted",
+      projectDescription: "LFF101 is an E-learning platform that is helping students who are new to technology, understand technology with hands on practice and live IDE on browser.",
+      descriptionVisible: false
+    }
+  ];
+
+
+// Testing hide show code start
+
+  // function toggle(params:type) {
+    
+  // }
+
+// Testing hide show code end
+
 
 }
