@@ -150,9 +150,26 @@ $padding-value: 2%
                 border-radius: 0px 0px 0px 7px
                 background: -webkit-linear-gradient(rgba(29,29,32,1), rgba(29,29,32,1)) padding-box, -webkit-linear-gradient(bottom right, rgba(255,219,118,.5), rgba(255,131,35,.5), rgba(224,51,128,.5), rgba(170,67,211,.5), rgba(99,111,233,.5)) border-box
     
+// Responsiveness temporary fix, to be worked on
 @media ( max-width: 800px )
+    // horrible fix, seriously fix this
+    .top-colorbar
+        margin-top: 10%
+
     .profile-section
         flex-direction: column
+
+        .introduction-section, .project-section
+            width: 100% !important
+            text-align: center
+            .header, .body
+                // padding: 15px 0px 15px 0px !important
+        .project-section
+            width: 100% !important
+
+            .project-bottom
+                margin-left: $padding-value * 3 !important
+                margin-bottom: 12px !important
 
 
 //top colorbar animation

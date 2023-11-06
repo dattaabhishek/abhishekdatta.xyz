@@ -6,13 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.sass']
 })
 export class ProfileComponent {
-  // hashmap
+  welcomeMessage = "Hey, I'm Abhishek";
+  aboutMe = `I'm a software engineer. I like creating minimalistic, responsive, pixel-perfect and robust web-applications.`
+
+  // hashmap to display project and embed their corresponding links
   projects= new Map([
     ["Honeybee Tetranine","https://dattaabhishek.github.io/HT/"],
     ["Goodman Agency","not hosted"],
     ["LFF101","not hosted"]
   ]);
-  // array
+  
+  // array of project description
   aboutProjects = [
     `A guitar enthusiast who likes to share his knowledge with others`,
     `Goodman Agency is a gym-marketing agency.
