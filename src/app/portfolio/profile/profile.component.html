@@ -22,8 +22,10 @@
             <div class="project-content">
                 <div class="project-list">
                     <a target="_blank" *ngFor="let item of projects; let i = index" [href]=projects[i].projectUrl>
-                        <div class="project-items">{{projects[i].projectName}}
-                        <div class="about-project">{{projects[i].projectDescription}}</div></div>
+                        <div class="project-items">
+                            <div class="project-name">{{projects[i].projectName}}</div>
+                            <div class="about-project">{{projects[i].projectDescription}}</div>
+                        </div>
                     </a>
                 </div> 
             </div>

@@ -3,6 +3,7 @@ a
     text-decoration: none
     
 $padding-value: 2%
+$standardRadius: 7px
 $projectDescriptionHeight: 70px
 $projectDescriptionMaxHeight: 500px
 
@@ -108,10 +109,11 @@ $projectDescriptionMaxHeight: 500px
                 margin-bottom: 2px
                 border-right: 1px solid transparent
                 border-top: 1px solid transparent
-                border-radius: 0px 7px 0px 0px
+                border-radius: 0px $standardRadius 0px 0px
                 background: -webkit-linear-gradient(rgba(29,29,32,1), rgba(29,29,32,1)) padding-box, -webkit-linear-gradient(bottom right, rgba(255,219,118,.5), rgba(255,131,35,.5), rgba(224,51,128,.5), rgba(170,67,211,.5), rgba(99,111,233,.5)) border-box
             .project-header
                 padding-left: 6%
+                margin-bottom: 10px
             //     font-size: clamp(30px, 2vw, 45px)
             //     font-weight: bold
             .project-content
@@ -124,19 +126,25 @@ $projectDescriptionMaxHeight: 500px
                     .project-items
                         font-size: 17px
                         transition: .2s
-                        margin-top: 15px
+                        // margin-top: 10px
                         cursor: pointer
-                        // padding-bottom: 10px
+                        // margin-bottom: 10px
                         margin-left: 10%
+                        color: rgba(255,255,255,1)
+                        .project-name
+                            // For future use
+                        .project-name:hover
+                            // text-decoration: underline
                         .about-project
-                            // border: 1px solid red
+                            // border: 1px solid white
+                            margin: 8px 0px 8px 0px
                             white-space: break-spaces
-                            border-radius: 7px
+                            border-radius: $standardRadius
                             // background-color: rgba(25,25,28,0.4)
                             font-size: 15px
                             margin-right: $padding-value * 7
                             // position: absolute
-                            transition: all .5s ease-in-out
+                            transition: all 1s ease-in-out
                             overflow: hidden
                             padding: 0
                             height: 0
@@ -145,6 +153,7 @@ $projectDescriptionMaxHeight: 500px
                             height: $projectDescriptionHeight
                             display: block
                             overflow-y: scroll
+                            border: 1px solid white
                     .project-items:hover
                         // height: 100px
                         // padding: 10px
@@ -153,11 +162,11 @@ $projectDescriptionMaxHeight: 500px
                         // font-size: 20px
                         // font-weight: 600
                         letter-spacing: 1px
-                        color: rgba(255,255,255,1)
                         // text-decoration: underline
 
                         // On hover changes project description properties
                         .about-project
+                            border: 1px solid white
                             padding: 10px
                             letter-spacing: 0
                             // Calculate the below using sass features
@@ -171,7 +180,7 @@ $projectDescriptionMaxHeight: 500px
                 margin: 2px
                 border-left: 1px solid transparent
                 border-bottom: 1px solid transparent
-                border-radius: 0px 0px 0px 7px
+                border-radius: 0px 0px 0px $standardRadius
                 background: -webkit-linear-gradient(rgba(29,29,32,1), rgba(29,29,32,1)) padding-box, -webkit-linear-gradient(bottom right, rgba(255,219,118,.5), rgba(255,131,35,.5), rgba(224,51,128,.5), rgba(170,67,211,.5), rgba(99,111,233,.5)) border-box
     
 // Responsiveness temporary fix, to be worked on
@@ -243,8 +252,11 @@ $projectDescriptionMaxHeight: 500px
         left: 0%
 
 ::-webkit-scrollbar
-    width: 1px
+    width: 3px
+    border-radius: 15px
 ::-webkit-scrollbar-track
     background: black
+    border-radius: $standardRadius
 ::-webkit-scrollbar-thumb
     background: white
+    border-radius: $standardRadius
