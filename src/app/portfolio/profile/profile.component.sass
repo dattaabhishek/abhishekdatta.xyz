@@ -120,21 +120,27 @@ $padding-value: 2%
                     list-style-type: none
                     word-wrap: break-word
                     .project-items
+                        font-size: 17px
                         transition: .2s
                         margin-top: 10px
                         // margin-bottom: 10px
-                        margin-left: 1%
+                        margin-left: 10%
+                    .about-projects
+                        // width: 90%
+                        padding: 0px
                     .hide
                         // border: 1px solid red
-                        // background: black
-                        position: relative
+                        border-radius: 5px
+                        background: black
+                        position: absolute
                         transition: height 1s ease-in-out
                         overflow: hidden
                         height: 0
-                    .project-items:hover
-                        // height: auto
+                    .project-items:hover + .hide
+                        height: 10px
+                        // padding: 10px
                         // transition: height 1s ease-in-out
-                        // display: block
+                        display: block
                         cursor: pointer
                         //font-size: 20px
                         //font-weight: 600
@@ -166,6 +172,15 @@ $padding-value: 2%
                 // padding: 15px 0px 15px 0px !important
         .project-section
             width: 100% !important
+
+            .project-header
+                padding-left: 0 !important
+
+            .project-content
+                .project-list
+                    .project-items
+                        text-align: center !important
+                        margin-left: 0 !important
 
             .project-bottom
                 margin-left: $padding-value * 3 !important

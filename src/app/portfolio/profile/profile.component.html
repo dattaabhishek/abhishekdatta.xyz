@@ -20,12 +20,12 @@
                 <h1>Projects</h1>
             </div>
             <div class="project-content">
-                <ul class="project-list">
+                <div class="project-list">
                     <a target="_blank" *ngFor="let item of projects.keys(); let i = index" [href]=projects.get(item)>
-                        <li class="project-items">{{item}}</li>
-                        <li class="about-projects hide">{{aboutProjects[i]}}</li>
+                        <div class="project-items">{{item}}</div>
+                        <div class="about-projects hide">{{aboutProjects[i]}}</div>
                     </a>
-                </ul> 
+                </div> 
             </div>
             <div class="project-bottom"></div>
         </div>
