@@ -15,7 +15,7 @@ export class ProfileComponent {
   projects = [
     {
       projectName: "Honeybee Tetranine",
-      projectUrl: "https://dattaabhishek.github.io/HT/",
+      projectUrl: "https://dattaabhishek.github.io/HoneybeeTetranine/",
       projectDescription: "Honeybee Tetranine is a guitar enthusiast who likes to share his knowledge with others.\nHelping Honeybee to create his own Masterclass website.", 
       descriptionVisible: false
     },
