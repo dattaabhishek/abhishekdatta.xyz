@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ProfileComponent {
   aboutMe = {
     welcomeMessage: "Hey, I'm Abhishek",
-    introduction: "I'm a software engineer. I like creating minimalistic, responsive, pixel-perfect and robust web-applications."
+    introduction: "I'm a web developer. I like creating minimalistic, responsive, pixel-perfect and robust web-applications."
   }
 
   // array of json (projects)
@@ -21,7 +21,7 @@ export class ProfileComponent {
     },
     {
       projectName: "Goodman Agency",
-      projectUrl: "not hosted",
+      projectUrl: "https://goodmanagency.co/",
       projectDescription: "Goodman Agency is a gym-marketing agency.\nHelped them transform their unfinished website into a fully working markatable web-application.", 
       descriptionVisible: false
     },
